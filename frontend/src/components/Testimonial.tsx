@@ -40,66 +40,137 @@ const testimonialData = [
 
 function Testimonial() {
   return (
-    <section className="w-full grid grid-cols-5 h-max">
-      <div className="ml-8 h-full bg-[#F9F9F9] rounded-tl-[6rem]" />
-      <div className="col-start-2 col-span-3 bg-[#F9F9F9] py-16">
-        <div className="w-full flex h-full lg:flex-row flex-col-reverse">
-          <div className="grid grid-cols-3 w-[45%]">
-            <div className="flex flex-col gap-y-5 justify-center items-center">
-              {testimonialData.slice(0, 2).map((data) => (
-                <LinkCard
-                  key={data.imgSrc}
-                  url={data.url}
-                  imgSrc={data.imgSrc}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col gap-y-5 justify-center items-center">
-              {testimonialData.slice(2, 5).map((data) => (
-                <LinkCard
-                  key={data.imgSrc}
-                  url={data.url}
-                  imgSrc={data.imgSrc}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col gap-y-5 justify-center items-center">
-              {testimonialData.slice(5, 7).map((data) => (
-                <LinkCard
-                  key={data.imgSrc}
-                  url={data.url}
-                  imgSrc={data.imgSrc}
-                />
-              ))}
+    <div className="grid grid-cols-11 w-full h-[40rem]">
+      <div className="2xl:col-span-2 lg:col-span-1 bg-[#F9F9F9] lg:rounded-tl-[6rem] lg:ml-8 h-full" />
+      <div className="2xl:col-span-7 lg:col-span-9 bg-[#F9F9F9] w-full relative">
+        <div className="absolute left-0 w-full h-full hidden lg:flex justify-center items-center">
+          <img
+            className="w-[20%] -ml-10"
+            src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/brand-after.png"
+            alt=""
+          />
+        </div>
+        <div className="w-full h-full grid grid-cols-10">
+          <div className="col-span-4 h-full">
+            <div className="hidden lg:grid grid-cols-3 gap-2 z-10 h-full w-full">
+              <div className="flex flex-col h-full w-full gap-y-3 justify-center items-center">
+                {testimonialData.slice(0, 2).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col gap-y-5 justify-center items-center">
+                {testimonialData.slice(2, 5).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col gap-y-5 justify-center items-center">
+                {testimonialData.slice(5, 7).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-          <div className="h-full lg:flex hidden flex-1 items-center">
-            <img
-              className=" w-[90%] -ml-3"
-              src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/brand-after.png"
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col flex-1 items-end justify-center gap-y-3 text-end">
-            <h1 className="text-[36px] relative !font-[900]">
-              <span className="inline-block w-11 h-11 relative -top-4 -right-3">
-                <img
-                  src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/heading-before.png"
-                  alt=""
-                />
-              </span>
-              Empowering <br /> Brands Across <br /> the Globe
-            </h1>
-            <p className="font-semibold">
-              StoreHippo ecommerce platform builds extraordinary solutions to
-              power brands across 15 countries and 30+ industries. Add your
-              brand to the long list of brands that trust StoreHippo.
-            </p>
+          <div className="col-span-2" />
+
+          <div className="col-span-4 w-full h-full">
+            <div className="flex flex-col items-end justify-center gap-y-3 lg:text-end text-center w-full h-full">
+              <h1 className="text-[36px] w-full relative !font-[900]">
+                <span className="inline-block w-11 h-11 relative -top-4 -right-3">
+                  <img
+                    src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/heading-before.png"
+                    alt=""
+                  />
+                </span>
+                Empowering Brands Across the Globe
+              </h1>
+              <p className="font-semibold">
+                StoreHippo ecommerce platform builds extraordinary solutions to
+                power brands across 15 countries and 30+ industries. Add your
+                brand to the long list of brands that trust StoreHippo.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#F9F9F9] rounded-br-[6rem]" />
-    </section>
+      <div className="2xl:col-span-2 lg:col-span-1 bg-[#F9F9F9]"></div>
+      {/* <section className="w-full grid grid-cols-5 h-max">
+        <div className="lg:ml-8 h-full bg-[#F9F9F9] lg:rounded-tl-[6rem]" />
+        <div className="col-start-2 col-span-3 bg-[#F9F9F9] py-16">
+          <div className="w-full flex flex-col-reverse lg:flex-row justify-between h-full relative my-4">
+            <div className="hidden lg:grid grid-cols-3 gap-2 w-[45%] z-10">
+              <div className="flex flex-col gap-y-5 justify-center items-center">
+                {testimonialData.slice(0, 2).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col gap-y-5 justify-center items-center">
+                {testimonialData.slice(2, 5).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
+              <div className="flex flex-col gap-y-5 justify-center items-center">
+                {testimonialData.slice(5, 7).map((data) => (
+                  <LinkCard
+                    key={data.imgSrc}
+                    url={data.url}
+                    imgSrc={data.imgSrc}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="lg:hidden flex gap-2 justify-center flex-wrap">
+              {testimonialData.map((data) => (
+                <LinkCard key={data.imgSrc} url={data.url} imgSrc={data.imgSrc} />
+              ))}
+            </div>
+            <div className="absolute w-full h-full hidden lg:flex justify-center items-center">
+              <img
+                className="w-[20%] -mr-20"
+                src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/brand-after.png"
+                alt=""
+              />
+            </div>
+            <div className="flex flex-col items-end justify-center gap-y-3 lg:text-end text-center lg:w-[40%] w-full">
+              <h1 className="text-[36px] w-full relative !font-[900]">
+                <span className="inline-block w-11 h-11 relative -top-4 -right-3">
+                  <img
+                    src="https://cdn1.storehippo.com/s/5667e7d63086b2e718049ad9/ms.files/new-home/heading-before.png"
+                    alt=""
+                  />
+                </span>
+                Empowering Brands Across the Globe
+              </h1>
+              <p className="font-semibold">
+                StoreHippo ecommerce platform builds extraordinary solutions to
+                power brands across 15 countries and 30+ industries. Add your
+                brand to the long list of brands that trust StoreHippo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[#F9F9F9] lg:rounded-br-[6rem]" />
+      </section> */}
+    </div>
   );
 }
 

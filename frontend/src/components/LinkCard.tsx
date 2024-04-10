@@ -1,6 +1,6 @@
 function LinkCard({ imgSrc, url }: { imgSrc: string; url: string }) {
     return (
-        <div className="relative w-[9rem] h-[9rem] rounded-xl group overflow-hidden shadow-2xl">
+        <div className="relative max-w-36 max-h-36 rounded-xl group overflow-hidden shadow-2xl">
             <a href={url} target="_blank">
                 <div className="bg-cover bg-center w-full h-full rounded-lg  hover:bg-opacity-75 transition duration-300 ease-in-out">
                     <img
