@@ -5,24 +5,25 @@ import {
     NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
 import { resourcesOptions } from "@/utils/constants";
-import NavbarMenuItem from "./NavbarMenuItem";
+import NavbarMenuItem, { MobileMenuItem } from "./NavbarMenuItem";
+import CustomCollapsible from "./CustomCollapsible";
 
 
 function Resources() {
     return (
-        <NavigationMenuItem>
-            <NavigationMenuTrigger>
+        <NavigationMenuItem >
+            <NavigationMenuTrigger className="!bg-transparent">
                 <p className="text-lg font-inter">Resources</p>
             </NavigationMenuTrigger>
             <NavigationMenuContent className="rounded-md">
                 <div className="p-6 gap-x-6 md:w-full lg:w-[40rem] font-inter flex flex-col gap-y-2">
                     <div className="flex flex-col gap-y-2">
-                        <h1 className="text-lg font-bold text-primary">RESOURCES</h1>
-                        <div className="w-8 border border-primary" />
+                        <h1 className="text-lg font-bold text-[#7db434]">RESOURCES</h1>
+                        <div className="w-8 border border-[#7db434]" />
                     </div>
                     <div className="grid grid-cols-2">
                         <div className="flex flex-col ">
-                            <div className="">
+                            <div>
                                 <p className="text-sm">
                                     Developer friendly yet easy to use tools
                                 </p>
@@ -44,13 +45,28 @@ function Resources() {
                                     image={resource.image}
                                 />
                             )
-
                             )}
                         </div>
                     </div>
                 </div>
             </NavigationMenuContent>
         </NavigationMenuItem>
+    )
+}
+
+export function MobileMenuResources(){
+    return (
+        <CustomCollapsible title="Resources">
+            <div className="flex flex-col gap-2 mt-2">
+                {resourcesOptions.map((resource) => (
+                    <MobileMenuItem
+                        key={resource.title}
+                        title={resource.title}
+                        image={resource.image}
+                    />
+                ))}
+            </div>
+        </CustomCollapsible>
     )
 }
 

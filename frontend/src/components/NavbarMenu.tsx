@@ -14,17 +14,15 @@ import { Button } from "./ui/button";
 
 export function NavbarMenu() {
     return (
-        <NavigationMenu className="mt-3">
-            <NavigationMenuList className="items-baseline gap-x-2">
-
+        <NavigationMenu className="mt-3 relative hidden lg:block">
+            <NavigationMenuList className="items-baseline -space-x-4">
                 <Solution />
                 <Develop />
-
                 <NavigationMenuItem className="">
                     <a href="/examples">
                         <Button
                             variant={"ghost"}
-                            className="text-lg font-inter hover:no-underline"
+                            className="text-lg hover:bg-transparent font-inter hover:no-underline"
                         >
                             Examples
                         </Button>
@@ -34,7 +32,7 @@ export function NavbarMenu() {
                     <a href="/pricing">
                         <Button
                             variant={"ghost"}
-                            className="text-lg font-inter hover:no-underline"
+                            className="text-lg hover:bg-transparent font-inter hover:no-underline"
                         >
                             Pricing
                         </Button>
