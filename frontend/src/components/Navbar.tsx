@@ -63,7 +63,7 @@ export function MobileMenu() {
           </div>
         </SheetTrigger>
         <SheetContent className="w-72 p-6 font-inter">
-          <div className="flex flex-col w-full ">
+          <div className="flex flex-col w-full mt-10 gap-4">
             <MobileMenuSolutions />
             <MobileMenuDevelop />
             <p className="hover:cursor-pointer">

@@ -16,8 +16,8 @@ function HeroSection() {
   return (
     <section className="w-full overflow-hidden">
       <div className="relative w-full h-full">
-        <div className="absolute w-full lg:h-[40rem] grid grid-cols-12 overflow-hidden">
-          <div className="col-span-9 border-blue-900 col-start-3">
+        <div className="absolute w-full lg:h-[40rem] grid grid-cols-12 overflow-hidden ">
+          <div className="col-span-9 border-blue-900 lg:col-start-3">
             <div className="grid lg:grid-cols-5">
               <div className="col-span-2 w-full lg:h-[40rem]">
                 <div className="w-full h-full flex items-center justify-center">
@@ -41,11 +41,11 @@ function HeroSection() {
           </div>
           <div className="bg-[#53713A] hidden lg:block" />
         </div>
-        <div className="w-full lg:h-[40rem] grid grid-cols-11 lg:pt-20 pt-32 pb-8 lg:pb-0">
-          <div className="2xl:col-span-2 lg:col-span-1" />
-          <div className="2xl:col-span-7 lg:col-span-9 col-start-3 w-full ">
+        <div className="w-full lg:h-[40rem] grid lg:grid-cols-11 lg:pt-20 pt-32 pb-8 lg:pb-0">
+          <div className="2xl:col-span-2 lg:col-span-1 lg:block hidden" />
+          <div className="2xl:col-span-7 2xl:col-start-3 lg:col-span-9 lg:col-start-2 w-full ">
             <div className="w-full h-full grid lg:grid-cols-10 grid-cols-11 ">
-              <div className="lg:col-span-6 col-start-1 col-span-9">
+              <div className="lg:col-span-6 col-span-11">
                 <div className="flex flex-col w-full h-full gap-y-4 justify-center">
                   <h1 className="lg:text-5xl text-3xl font-black leading-snug lg:text-start text-center">
                     Next Gen Enterprise Ecommerce Platform
@@ -74,7 +74,7 @@ function HeroSection() {
                   </Button>
                 </div>
               </div>
-              <div className="col-span-4 hidden lg:block -mr-2">
+              <div className="lg:col-span-4 hidden lg:block -mr-2">
                 <div className="w-full h-full flex items-end 2xl:justify-end">
                   <img
                     className="absolute h-[32rem]"
@@ -85,7 +85,7 @@ function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="2xl:col-span-2 lg:col-span-1" />
+          <div className="2xl:col-span-2 lg:col-span-1 lg:block hidden" />
         </div>
       </div>
     </section>

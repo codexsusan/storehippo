@@ -15,7 +15,7 @@ function CustomCollapsible({
 }) {
   return (
     <Collapsible className="w-full">
-      <CollapsibleTrigger className="w-full mt-10">
+      <CollapsibleTrigger className="w-full">
         <div className="hover:cursor-pointer flex justify-between w-full">
           <p>{title}</p>
           <ChevronDown />

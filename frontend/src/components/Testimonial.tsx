@@ -40,9 +40,9 @@ const testimonialData = [
 
 function Testimonial() {
   return (
-    <div className="grid grid-cols-11 w-full h-[40rem]">
-      <div className="2xl:col-span-2 lg:col-span-1 bg-[#F9F9F9] lg:rounded-tl-[6rem] lg:ml-8 h-full" />
-      <div className="2xl:col-span-7 lg:col-span-9 bg-[#F9F9F9] w-full relative">
+    <div className="grid grid-cols-11 w-full h-max ">
+      <div className="2xl:col-span-2 col-span-1  bg-[#F9F9F9]  lg:rounded-tl-[6rem] lg:ml-8 h-full" />
+      <div className="2xl:col-span-7 col-span-9 col-start-2 bg-[#F9F9F9] w-full relative">
         <div className="absolute left-0 w-full h-full hidden lg:flex justify-center items-center">
           <img
             className="w-[20%] -ml-10"
@@ -50,8 +50,17 @@ function Testimonial() {
             alt=""
           />
         </div>
-        <div className="w-full h-full grid grid-cols-10">
-          <div className="col-span-4 h-full">
+        <div className="w-full h-full grid-cols-10 flex flex-col-reverse lg:flex-row justify-between py-10">
+          <div className="lg:w-[40%] w-full h-full">
+            <div className="flex flex-wrap justify-center gap-4 w-full lg:hidden">
+              {testimonialData.map((data) => (
+                <LinkCard
+                  key={data.imgSrc}
+                  url={data.url}
+                  imgSrc={data.imgSrc}
+                />
+              ))}
+            </div>
             <div className="hidden lg:grid grid-cols-3 gap-2 z-10 h-full w-full">
               <div className="flex flex-col h-full w-full gap-y-3 justify-center items-center">
                 {testimonialData.slice(0, 2).map((data) => (
@@ -82,9 +91,8 @@ function Testimonial() {
               </div>
             </div>
           </div>
-          <div className="col-span-2" />
 
-          <div className="col-span-4 w-full h-full">
+          <div className="lg:w-[40%] w-full h-full">
             <div className="flex flex-col items-end justify-center gap-y-3 lg:text-end text-center w-full h-full">
               <h1 className="text-[36px] w-full relative !font-[900]">
                 <span className="inline-block w-11 h-11 relative -top-4 -right-3">
@@ -104,7 +112,7 @@ function Testimonial() {
           </div>
         </div>
       </div>
-      <div className="2xl:col-span-2 lg:col-span-1 bg-[#F9F9F9]"></div>
+      <div className="2xl:col-span-2 col-span-1 bg-[#F9F9F9] lg:rounded-br-[6rem]"></div>
       {/* <section className="w-full grid grid-cols-5 h-max">
         <div className="lg:ml-8 h-full bg-[#F9F9F9] lg:rounded-tl-[6rem]" />
         <div className="col-start-2 col-span-3 bg-[#F9F9F9] py-16">
